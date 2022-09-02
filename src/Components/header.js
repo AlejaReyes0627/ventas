@@ -1,18 +1,15 @@
 import React from "react";
-const header = ()=>{
-    const titulo = "header";
-    const a = 5;
-    const b = 6;
-    return (
-      <div>
-        <h2>
-            {titulo}
-        </h2>
-        <p>
-            {a+b}
-        </p>
+import 'bulma/css/bulma.css';
+const Header = () => {
+  return (
+    <div className="navbar is-primary">
+      <div className="navbar-brand">
+        <a className="navbar-item">
+          <img src="logo.png" alt="logo"/>
+        </a>
       </div>
-    );
-  }
-  
-  export default header;
+    </div>
+  );
+}
+
+export default Header;

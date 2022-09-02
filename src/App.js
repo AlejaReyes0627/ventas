@@ -1,12 +1,10 @@
-import Header from "./Components/header";
-import Menu from "./Components/menu";
-function App (){
+import React from "react";
+import '@fortawesome/fontawesome-free/js/all';
+import Layout from "./Components/Layout";
+function App() {
   return (
     <div>
-      <h1>
-        <Header/>
-        <Menu titulo="Universidad de Ibagué" subtitulo="Sistemas"/>
-      </h1>
+        <Layout />
     </div>
   );
 }
