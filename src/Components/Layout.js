@@ -1,26 +1,27 @@
-import React from 'react';
-import Header from "./Header";
+import React from "react";
 import Menu from "./Menu";
+import Header from "./Header";
 
-const Layout =()=>{
+const Layout = (props) => {
+
     return(
+        
         <div>
-            <Header />
+            <Header/>
             <br></br>
-            <div className='container'>
-                <div className='columns'>
-                    <div className='column is-one-quarter'>
-                        <Menu />
+            <div className="container">
+                <div className="columns">
+                    <div className="column is-one-quarter">
+                        <Menu/>
                     </div>
-                    <div className='column'>
-                        <p>
-                            Este es el contenido
-                        </p>
+                    <div className="column">
+                        {props.children}
                     </div>
                 </div>
             </div>
-        </div>
+        </div>    
     );
+
 }
 
 export default Layout;
