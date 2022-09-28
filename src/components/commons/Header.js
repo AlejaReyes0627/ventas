@@ -6,10 +6,10 @@ const Header = () => {
 
    return(
 
-    <div className="navbar is-link" style={{justifyContent:"center"}}>
-      <div className="navbar-brand" >
+    <div className="navbar is-info">
+      <div className="navbar-brand">
         <Link to ="/" className='navbar-item'>
-          <img src="logo.png" alt="logo" />
+          <img src="logo.png" alt="logo"/>
         </Link>
         
       </div>

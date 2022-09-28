@@ -1,17 +1,21 @@
 import React, {useContext} from "react";
 import { ModalContext } from "../../contexts/modal/ModalContexts";
+import { ClienteContext } from "../../contexts/modal/ClienteContext";
 
 const ToolbarCliente = () => {
   const {setShowModal, setModalTitle } = useContext(ModalContext);
 
+  const {obtenerCliente} = useContext(ClienteContext);
+
   const abrirModalCrear = () => {
     setModalTitle("Registrar nuevo Cliente");
     setShowModal(true);
+    obtenerCliente(null);
   };
   return (
-    <div className="container" style={{margin:"5px"}}>
+    <div className="container">
       <button
-        className="button is-small is-link is-light is-outlined"
+        className="button is-small is-link"
         onClick={() => abrirModalCrear()}
       >
         <span className="icon is-small">

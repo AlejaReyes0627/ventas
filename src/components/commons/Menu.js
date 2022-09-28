@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 const Menu = (props) => {
   return (
-    <nav className="panel is-link">
-      <p className="panel-heading " style={{color:'black', textAlign:"center"}}>Menu</p>
-      <div className="panel-block ">
-        <Link to="/" className="button is-fullwidth is-link is-light is-focused">
+    <nav className="panel">
+      <p className="panel-heading has-background-info-light is-align-content-center">Menu</p>
+      <div className="panel-bloc">
+        <Link to="/" className="button is-fullwidth">
           <span className="icon">
             <i className="fas fa-home"></i>
           </span>
           <span>Inicio</span>
         </Link>
       </div>
-      <div className="panel-block ">
-        <Link to="/Clientes" className="button is-fullwidth  is-link is-light is-focused">
+      <div className="panel-bloc">
+        <Link to="/Clientes" className="button is-fullwidth">
           <span className="icon">
             <i className="fas fa-users"></i>
           </span>

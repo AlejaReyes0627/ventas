@@ -5,14 +5,14 @@ import {ModalContextProvider} from "../../contexts/modal/ModalContexts";
 
 const Layout = (props) => {
   return (
-    <ModalContextProvider >
+    <ModalContextProvider>
       <div>
         <Header />
         <br></br>
         <div className="container">
-          <div className="columns  ">
-            <div className="column is-one-quarter ">
-              <Menu/>
+          <div className="columns">
+            <div className="column is-one-quarter">
+              <Menu />
             </div>
             <div className="column">{props.children}</div>
           </div>

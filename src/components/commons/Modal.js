@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ModalContext } from "../../contexts/modal/ModalContexts";
+import FormClientes from "../clientes/FormClientes";
 
 const Modal = (props) => {
   const { showModal, modalTitle, setShowModal, setModalTitle } =
@@ -19,7 +20,7 @@ const Modal = (props) => {
             }}
           ></button>
         </header>
-        <section className="modal-card-body">Contenido</section>
+        <section className="modal-card-body">{props.children}</section>
       </div>
     </div>
   );

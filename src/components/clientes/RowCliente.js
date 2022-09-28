@@ -1,15 +1,14 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { ModalContext } from "../../contexts/modal/ModalContexts";
+import { ClienteContext } from "../../contexts/modal/ClienteContext";
 
 const RowCliente = ({ cliente }) => {
+  const { setShowModal, setModalTitle } = useContext(ModalContext);
+  const { obtenerCliente, eliminarCliente } = useContext(ClienteContext);
 
-  const {setShowModal, setModalTitle } = useContext(ModalContext);
   const modificarCliente = () => {
+    obtenerCliente(cliente);
     setModalTitle("Modificar Cliente");
-    setShowModal(true);
-  };
-  const eliminarCliente = () => {
-    setModalTitle("Eliminar Cliente");
     setShowModal(true);
   };
 
@@ -28,7 +27,7 @@ const RowCliente = ({ cliente }) => {
         <button
           className="button is-small is-danger"
           title="Eliminar"
-          onClick={() => eliminarCliente()}
+          onClick={() => eliminarCliente(cliente.idCliente)}
         >
           <span className="icon is-small">
             <i className="fas fa-trash"></i>
